@@ -1,0 +1,13 @@
+commit cdd8ecd7313f856fb009e2180d5fb54ba57a1203
+Author: kallandas <54117215+kallandas@users.noreply.github.com>
+Date:   Fri Sep 9 15:30:45 2022 -0400
+
+    Update README.md
+    
+    Adding Full name and course name and section name to README.md
+
+commit 22612e212fc931444c46b82ae5b03f13026a5e23
+Author: kallandas <54117215+kallandas@users.noreply.github.com>
+Date:   Fri Sep 9 15:28:44 2022 -0400
+
+    Initial commit
