@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Author: Ji Yong Hwang
-# Author ID: 058819954
+# Author ID: jyhwang
 # Date Created: 2022/09/20
 
 import sys
