@@ -17,3 +17,12 @@ percent_to_graph(30,15)
 percent_to_graph(16,12)
 percent_to_graph(1000,10)
 print(round(10.55))
+
+def call_du_sub(location):
+    p = subprocess.Popen(['du -d 1 ' + location], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    # This command line runs 'du -d 1' command on the <target directory> and put it into variable "p".
+    output = p.communicate()
+    # output is used to store raw data in the tuple data format so that it can be processed in more managable ways later on.
+    result = output[0].decode('utf-8').strip().split('\n')
+    # Splits the tuple data into a list so that it can be used later on by another function.
+    return result
