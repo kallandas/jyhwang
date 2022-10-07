@@ -2,26 +2,22 @@
 #!/usr/bin/env python3
 # Author ID: jyhwang
 
+from decimal import ROUND_05UP
 import subprocess
 
-def percent_to_graph(percent, total_chars, max_length=20):
+def percent_to_graph(percent, max_length=20):
     # "returns a string: eg. '##  ' for 50 if total_chars == 4"  
-    percent = int(percent)
-    total_chars = int(total_chars)
-    if 0 <= percent <= 100:
-        num_char = total_chars * percent // 100 # Calculation input into actual number of characters to draw.
-        num_space = total_chars - num_char # Calculating the number of spaces to print
-        graph_draw = (print(('#' * num_char) + ('.' * num_space))) # print out the character "#" as many times as num_char value.
-        return str(graph_draw)
-    else:
-        return print("Error, percent value is out of range. Must be in range of 0 to 100")
+    num_chr = round((max_length * percent) / 100) # Calculating input into actual number of characters to draw. Round up.
+    inv_pcnt = 100 - percent  # Calculating Inverse percent.
+    num_spc = round((max_length * inv_pcnt) / 100) # Calculating the number of spaces to print
+    graph_draw = (('=' * num_chr) + (' ' * num_spc)) # print out the character "#" as many times as num_char value.
+    return num_chr, num_spc, graph_draw
 
-percent_to_graph(33,10)
-percent_to_graph(56,15)
-percent_to_graph(70,20)
-percent_to_graph(63,30)
-percent_to_graph(89,80)
-print(round(10.55))
+print(percent_to_graph(33,10))
+print(percent_to_graph(56,15))
+print(percent_to_graph(70,20))
+print(percent_to_graph(63,30))
+print(percent_to_graph(89,80))
 
 def call_du_sub(location):
     p = subprocess.Popen(['du -d 1 ' + location], stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
