@@ -1,21 +1,26 @@
+
 #!/usr/bin/env python3
 # Author ID: jyhwang
+
+import subprocess
 
 def percent_to_graph(percent, total_chars, max_length=20):
     # "returns a string: eg. '##  ' for 50 if total_chars == 4"  
     percent = int(percent)
     total_chars = int(total_chars)
-    if 0 < percent <= 100:
-        num_char = round(total_chars * percent // 100) # Calculation input into actual number of characters to draw.
+    if 0 <= percent <= 100:
+        num_char = total_chars * percent // 100 # Calculation input into actual number of characters to draw.
         num_space = total_chars - num_char # Calculating the number of spaces to print
-        graph_draw = print(("#" * num_char) + ("." * num_space)) # print out the character "#" as many times as num_char value.
+        graph_draw = (print(('#' * num_char) + ('.' * num_space))) # print out the character "#" as many times as num_char value.
         return str(graph_draw)
     else:
         return print("Error, percent value is out of range. Must be in range of 0 to 100")
 
-percent_to_graph(30,15)
-percent_to_graph(16,12)
-percent_to_graph(1000,10)
+percent_to_graph(33,10)
+percent_to_graph(56,15)
+percent_to_graph(70,20)
+percent_to_graph(63,30)
+percent_to_graph(89,80)
 print(round(10.55))
 
 def call_du_sub(location):
