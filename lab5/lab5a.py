@@ -10,7 +10,9 @@ def read_file_string(file_name):
 
 def read_file_list(file_name):
     f = open(file_name, 'r')
-    newlist = f.readlines()
+    read_data = f.read()
+    newlist = read_data.split('\n')
+    newlist.pop()
     f.close()
     return newlist
     # Takes a file_name as string for a file name, 
