@@ -105,4 +105,3 @@ test_d_function_read_file_correct_output_2 (__main__.lab5c)
 Ran 44 tests in 0.481s
 
 OK
-
