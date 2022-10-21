@@ -1,0 +1,15 @@
+apple0.txt
+test6.gif
+kangaroo7.docx
+banana7.md
+program5.png
+network0.png
+example2.exe
+test3.docx
+gamma2.conf
+beta7.gif
+program2.md
+network7
+gamma2.py
+test5
+output5.txt
