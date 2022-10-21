@@ -37,6 +37,14 @@ def get_total(raw_dict, target_dir):
     return value
 
     "return total size (in bytes) of the target directory"
+    
+# def get_total(raw_dict, target_dir):
+#    sum = int()
+#    for k, v in raw_dict.items():
+#        if k is not target_dir:
+#            sum = sum + int(v)
+#    return sum
+#    "return total size (in bytes) of the target directory"
 
 raw_dict = create_dir_dict(call_du_sub('~/ops435'))
 print(raw_dict)
