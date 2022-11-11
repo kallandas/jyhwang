@@ -14,19 +14,26 @@ def format_time(t):
     """Return time object (t) as a formatted string"""
     return '%.2d:%.2d:%.2d' % (t.hour, t.minute, t.second)
 
+def time_to_sec(time):
+    '''convert a time object to a single integer representing the number of seconds from mid-night'''
+    minutes = time.hour * 60 + time.minute
+    seconds = minutes * 60 + time.second
+    return seconds
+
+def sec_to_time(seconds):   
+    '''convert a given number of seconds to a time object in hour,minute,second format'''
+    time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes,60)
+    return time
+
 def sum_times(t1, t2):
     """Add two time objests and return the sum."""
-    sum = Time(0,0,0)
-    sum.hour = t1.hour + t2.hour
-    sum.minute = t1.minute + t2.minute
-    sum.second = t1.second + t2.second
-    while sum.minute >= 60:
-      sum.minute -= 60 
-      sum.hour += 1
-    while sum.second >= 60:
-      sum.second -= 60
-      sum.minute += 1
-    return sum
+    sec_sum = int()
+    sec_t1 = time_to_sec(t1)
+    sec_t2 = time_to_sec(t2)
+    sec_sum = sec_t1 + sec_t2 
+    return sec_to_time(sec_sum)
 
 def valid_time(t):
     """check for the validity of the time object attributes:
@@ -36,3 +43,9 @@ def valid_time(t):
     if t.minute >= 60 or t.second >= 60 or t.hour >= 24:
        return False
     return True
+
+def change_time(time, seconds):
+    time_sec = Time()
+    time_sec = sec_to_time(seconds)
+    sum_sec = sum_times(time, time_sec)
+    return sum_sec
