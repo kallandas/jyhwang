@@ -1,18 +1,6 @@
 Checking for updates...
 Running latest version...
-Press ENTER to run the Lab Check...
-OPS435 Lab Report - System Information for running ./CheckLab5.py
-=================================================================
-    User login name: jyhwang
-    Linux system name: mtrx-node06pd.dcm.senecacollege.ca
-    Linux system version: CentOS Linux release 7.9.2009 (Core)
-    Python executable: /usr/bin/python3
-    Python version: 368
-    OS Platform: linux
-    Working Directory: /home/jyhwang/ops435/lab5
-    Start at: Fri Oct 14 11:11:19 2022
-=================================================================
-test_0 (__main__.lab5a)
+Press ENTER to run the Lab Check...test_0 (__main__.lab5a)
 [Lab 5] - [Investigation 1] - [Part 1] - Files - Test for file creation: ./lab5a.py ... ok
 test_a (__main__.lab5a)
 [Lab 5] - [Investigation 1] - [Part 1] - Files - Test for errors running: ./lab5a.py ... ok
@@ -102,6 +90,17 @@ test_d_function_read_file_correct_output_2 (__main__.lab5c)
 [Lab 5] - [Investigation 2] - [Part 1] - Files - Test for output: ./lab5c.py ... ok
 
 ----------------------------------------------------------------------
-Ran 44 tests in 0.481s
+Ran 44 tests in 0.521s
 
 OK
+OPS435 Lab Report - System Information for running ./CheckLab5.py
+=================================================================
+    User login name: jyhwang
+    Linux system name: mtrx-node06pd.dcm.senecacollege.ca
+    Linux system version: CentOS Linux release 7.9.2009 (Core)
+    Python executable: /usr/bin/python3
+    Python version: 368
+    OS Platform: linux
+    Working Directory: /home/jyhwang/ops435/lab5
+    Start at: Fri Nov 11 12:16:38 2022
+=================================================================
